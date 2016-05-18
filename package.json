@@ -1,6 +1,6 @@
 {
   "name": "event_planner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create events and save them to local storage via a simple, easy to use gui. Works on desktop and mobile.",
   "main": "index.js",
   "scripts": {
