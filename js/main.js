@@ -1,3 +1,8 @@
+
+
+
+
+
 		 /////////////////////////////////////
 		// Validator Script for index.html //
 	   /////////////////////////////////////
@@ -84,6 +89,46 @@ $(document).ready(function () {
 		}
 	});
 });
+
+		
+
+
+
+
+
+	       //////////////////////////////////////
+     	  //Script for Date/time Picker Plugin//
+	     //////////////////////////////////////		
+	
+
+	
+	$(document).ready(function () {
+
+		$("#dt1").datepicker({
+			dateFormat: "mm/dd/yy",
+			minDate: 0,
+			onSelect: function (date) {
+				var dt2 = $('#dt2');
+				var startDate = $(this).datepicker('getDate');
+				var minDate = $(this).datepicker('getDate');
+				dt2.datepicker('setDate', minDate);
+				startDate.setDate(startDate.getDate() + 30);
+				//sets dt2 maxDate to the last day of 30 days window
+				dt2.datepicker('option', 'maxDate', startDate);
+				dt2.datepicker('option', 'minDate', minDate);
+				$(this).datepicker('option', 'minDate', minDate);
+			}
+		});
+		$('#dt2').datepicker({
+			dateFormat: "mm/dd/yy"
+		});
+	});	
+
+
+
+
+
+
 
 
 		 //////////////////////////////////////
@@ -181,3 +226,50 @@ $(document).ready(function () {
 	});	
 	
 });
+
+
+
+
+
+
+	      /////////////////////////////////////
+		 //Script for Location Picker Plugin//
+	    /////////////////////////////////////	
+	
+
+	$(document).ready(function($){
+		$('#us3').locationpicker({
+			location: {
+				latitude: 0,
+				longitude: 0
+			},
+			radius: 300,
+			inputBinding: {
+				locationNameInput: $('#location')
+			},
+			enableAutocomplete: true,
+			onchanged: function (currentLocation, radius, isMarkerDropped) {
+			}
+		});
+	});
+		
+
+	
+
+
+
+
+	      /////////////////////////////////////
+ 		 //Script for Document Writer Plugin//
+	    /////////////////////////////////////		
+	
+
+	
+		$(document).ready(function($){
+			$('#event-form').submit(function(e){
+				var val = $(this).find('#eventname').val();
+				$('ul.list').append('<li class="list-group-item">' + val + '</li>');
+				e.preventDefault();
+			});
+		})(jQuery);	
+	

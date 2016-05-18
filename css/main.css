@@ -8,10 +8,18 @@ a {
 	margin-bottom: 10px;	
 }
 
-.container {
+#home {
 	height: 93vh;
 }
 
-.panel-body {
-	height: 70vh;
+#copyright {
+	height: 65vh;
+}
+
+textarea {
+    resize: none;
+}
+
+.optional {
+	opacity: 0.5;
 }
