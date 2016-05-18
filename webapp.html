@@ -39,7 +39,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h3>Create An Event</h3></div>
 			<div class="panel-body">
-				<form id="event-form" method="get" class="form-horizontal" action="events.html">
+				<form id="event-form" method="get" class="form-horizontal" action="#">
 					
 					<!-- Event Name -->					
 					
@@ -126,21 +126,42 @@
 
 				<!-- Cancel Button -->
 
-						<a href="events.html">
-							<button type="button" class="btn btn-warning" id="button">Cancel</button>
-						</a>
-						
+						<a href="index.html">
+							<button type="button" class="btn btn-primary" id="button">Logout</button>
+						</a>					
+				
 					</div>					
 					
 				</form>
 				
+				<!-- Event List -->
+				
+				<div id="confirmation" class="alert alert-success hidden">
+					<form method="get" action="#">
+					<h3>Event created!</h3> <br><br>
+					    <ul class="list list-group">
+    					</ul>
+				
+						<a href="webapp.html">
+							<button type="button" class="btn btn-success" id="button">Create Event</button>
+						</a>
+						
+						<a href="events.html">
+							<button type="button" class="btn btn-warning" id="button">Home</button>
+						</a>							
+
+						<a href="index.html">
+							<button type="button" class="btn btn-primary" id="button">Logout</button>
+						</a>							
+					</form>
+				</div>				
 			</div>
 		</div>
 	</div>
 	
 	 <!--*************************************
 		 * Script for Location Picker Plugin *
-	 	 *    Scope must remain localized    * 
+	 	 *      Must remain localized        * 
 		 *************************************-->	
 	
 	<script>
@@ -160,6 +181,25 @@
 		});
 		
 	</script>
+	
+	 <!--*************************************
+		 * Script for Document Writer Plugin *
+	 	 *      Must remain localized        * 
+		 *************************************-->		
+	
+	<script>
+	
+		(function($){
+			$('#event-form').submit(function(e){
+				var val = $(this).find('#eventname').val();
+				$('ul.list').append('<li class="list-group-item">' + val + '</li>');
+				e.preventDefault();
+			});
+		})(jQuery);	
+		
+	</script>
+	
+
 	
 </body>
 </html>

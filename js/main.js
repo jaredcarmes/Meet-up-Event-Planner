@@ -171,4 +171,13 @@ $(document).ready(function () {
 			}				
 		}
 	});
+	
+	// Catching "success (submit)" event //
+
+	validator.on("success.form.bv", function (e) {
+		e.preventDefault ();
+		$("#event-form").addClass("hidden");
+		$("#confirmation").removeClass("hidden");
+	});	
+	
 });
