@@ -1,6 +1,6 @@
 {
   "name": "event_planner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create events and save them to local storage via a simple, easy to use gui. Works on desktop and mobile.",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
   "devDependencies": {
     "gulp-concat": "^2.6.0",
     "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
     "gulp-uglify": "^1.5.3"
   }
 }
