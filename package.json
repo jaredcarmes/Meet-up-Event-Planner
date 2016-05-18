@@ -1,0 +1,24 @@
+{
+  "name": "Jared Armes",
+  "description": "Application schedules events and can store them on a server",
+  "version": "0.8.5",
+  "keywords": [
+    "event",
+    "list",
+    "jquery",
+    "webapp",
+    "localStorage",
+    "bootstrap",
+    "udacity"
+  ],
+  "dependencies": {
+    "Bootstrap": "v3+",
+    "http://formvalidation.io/": "v0.71",
+    "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js": "v1.11.4",
+    "http://maps.google.com/maps/api/js?sensor=false&libraries=places": "latest"
+  },
+  "bugs": {
+    "mail": "jared.armes@mail.com"
+  },
+  "homepage": "www.jaredarmes.xyz"
+}

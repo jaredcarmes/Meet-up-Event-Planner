@@ -90,45 +90,7 @@ $(document).ready(function () {
 	});
 });
 
-		
-
-
-
-
-
-	       //////////////////////////////////////
-     	  //Script for Date/time Picker Plugin//
-	     //////////////////////////////////////		
 	
-
-	
-	$(document).ready(function () {
-
-		$("#dt1").datepicker({
-			dateFormat: "mm/dd/yy",
-			minDate: 0,
-			onSelect: function (date) {
-				var dt2 = $('#dt2');
-				var startDate = $(this).datepicker('getDate');
-				var minDate = $(this).datepicker('getDate');
-				dt2.datepicker('setDate', minDate);
-				startDate.setDate(startDate.getDate() + 30);
-				//sets dt2 maxDate to the last day of 30 days window
-				dt2.datepicker('option', 'maxDate', startDate);
-				dt2.datepicker('option', 'minDate', minDate);
-				$(this).datepicker('option', 'minDate', minDate);
-			}
-		});
-		$('#dt2').datepicker({
-			dateFormat: "mm/dd/yy"
-		});
-	});	
-
-
-
-
-
-
 
 
 		 //////////////////////////////////////
@@ -183,6 +145,16 @@ $(document).ready(function () {
 					}
 				}
 			},
+			
+			// Start Time Validator //				
+
+			starttime : {
+				validators : {
+					notEmpty : {
+						message : "Please select the start time"
+					}
+				}
+			},			
 
 			// End Date Validator //				
 
@@ -193,6 +165,16 @@ $(document).ready(function () {
 					}
 				}
 			},
+			
+			// End Time Validator //				
+
+			endtime : {
+				validators : {
+					notEmpty : {
+						message : "Please select the end time"
+					}
+				}
+			},			
 
 			// Guest List Validator //
 
@@ -226,6 +208,37 @@ $(document).ready(function () {
 	});	
 	
 });
+
+
+
+
+
+
+
+
+
+		 /////////////////////////////////////
+		//    Date & Time Picker plugin    //
+	   /////////////////////////////////////
+
+
+
+$(document).ready(function($){
+	$('#Date_and_Time .time').timepicker({
+		'showDuration': true,
+		'timeFormat': 'g:ia'
+	});
+
+	$('#Date_and_Time .date').datepicker({
+		'format': 'm/d/yyyy',
+		'autoclose': true
+	});
+
+
+	var Date_and_TimeEL = document.getElementById('Date_and_Time');
+	var datepair = new Datepair(Date_and_TimeEL);
+});
+	
 
 
 
@@ -272,4 +285,6 @@ $(document).ready(function () {
 				e.preventDefault();
 			});
 		})(jQuery);	
-	
+
+
+

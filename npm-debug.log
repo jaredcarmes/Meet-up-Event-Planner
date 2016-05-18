@@ -1,0 +1,19 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'init', '[-f' ]
+2 info using npm@3.8.6
+3 info using node@v6.1.0
+4 verbose stack Error: write EPIPE
+4 verbose stack     at exports._errnoException (util.js:949:11)
+4 verbose stack     at WriteWrap.afterWrite (net.js:793:14)
+5 verbose cwd /Users/Jared/Google Drive/Websites/Udacity/Event Planner
+6 error Darwin 15.3.0
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "init" "[-f"
+8 error node v6.1.0
+9 error npm  v3.8.6
+10 error code EPIPE
+11 error errno EPIPE
+12 error syscall write
+13 error write EPIPE
+14 error If you need help, you may report this error at:
+14 error     <https://github.com/npm/npm/issues>
+15 verbose exit [ 1, true ]
