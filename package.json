@@ -1,0 +1,11 @@
+{
+  "name": "event_planner",
+  "version": "1.0.0",
+  "description": "Create events and save them to local storage via a simple, easy to use gui. Works on desktop and mobile.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jared Armes <jared.armes@mail.com> (http://jaredarmes.xys)",
+  "license": "ISC"
+}
